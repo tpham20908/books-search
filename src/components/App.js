@@ -26,7 +26,7 @@ class App extends Component {
     */
 
     this.state = {}
-    this.performSearch("learn java");
+    // this.performSearch("learn java");
   }
 
   performSearch(searchTerm) {
@@ -87,6 +87,11 @@ class App extends Component {
     })
   }
 
+  searchHandle(event) {
+    const searchTerm = event.target.value ? event.target.value : "Narcity" ;
+    this.performSearch(searchTerm);
+  }
+
   render() {
     return (
       <div className="App">
@@ -102,14 +107,7 @@ class App extends Component {
             </tr>
           </tbody>
         </table>
-        <input style={{
-          fontSize: 24,
-          display: "block",
-          width: "100%",
-          paddingTop: 8,
-          paddingBottom: 8,
-          paddingLeft: 16
-        }} placeholder="enter search term" />
+        <input onChange={this.searchHandle.bind(this)} placeholder="enter search term" />
 
         {this.state.books}
       </div>

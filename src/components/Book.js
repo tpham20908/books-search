@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import bookImg from "images/book.png"
 
 class Books extends Component {
+
+  handleView() {
+    const url = this.props.bookInfo.infoLink;
+    window.location.href = url;
+  }
+
   render() {
     return (
       <div>
@@ -13,10 +19,13 @@ class Books extends Component {
                 <img alt="poster" src={bookImg} />
               </td>
               <td>
-                {this.props.bookInfo.title}
+                <h3>{this.props.bookInfo.title}</h3>
                 <p>{this.props.bookInfo.author}</p>
                 <p>{this.props.bookInfo.description}</p>
-                <a href={this.props.bookInfo.infoLink}>Info Link</a>
+                <button>
+                  <a href={this.props.bookInfo.infoLink} target="_blank">View</a>
+                </button>
+
               </td>
             </tr>
           </tbody>
