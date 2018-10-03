@@ -1,12 +1,38 @@
-.titleBar {
-  background-color: #000;
-  display: block;
-  color: #fff;
-  padding-left: 16px;
+.wrapper {
+  background: linear-gradient(to right, #77e, #c65);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-img {
-  width: 160px;
+.main {
+  height: 90vh;
+  background: #fff;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title-container {
+  height: 90vh;
+  background: url("../images/background.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+
+.list-container {
+  background-color: #2c3e50;
+  color: #ccc;
+  height: 90vh;
+  padding-top: 20px;
+  padding-left: 20px;
+  overflow: auto;
 }
 
 input {
@@ -14,4 +40,8 @@ input {
   display: block;
   width: 100%;
   padding: 8px 16px;
+}
+
+.card img {
+  max-height: 12em;
 }
