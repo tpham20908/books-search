@@ -32,14 +32,19 @@
   height: 90vh;
   padding-top: 20px;
   padding-left: 20px;
+}
+
+.list {
+  height: 75vh;
   overflow: auto;
+  padding: 0;
 }
 
 input {
   font-size: 24px;
   display: block;
   width: 100%;
-  padding: 8px 16px;
+  padding: 4px 16px;
 }
 
 .card img {

@@ -24,13 +24,13 @@ class App extends Component {
           bookInfo.id = item.id;
           bookInfo.title = info.title;
           bookInfo.category = info.categories + "";
-          bookInfo.author = info.authors + "";
+          bookInfo.author = info.authors ? info.authors + "" : "N/A" ;
           bookInfo.publisher = info.publisher;
           bookInfo.publishedDate = info.publishedDate;
           bookInfo.description = info.description;
           bookInfo.imageLink = info.imageLinks ? info.imageLinks.thumbnail : "images/book.png";
           bookInfo.infoLink = info.infoLink;
-          bookInfo.rating = `${info.averageRating}`;
+          bookInfo.rating = info.averageRating ? `${info.averageRating}` : "N/A";
 
           let bookRow = <Book key={bookInfo.id} bookInfo={bookInfo} />
           bookRows.push(bookRow);
@@ -54,14 +54,16 @@ class App extends Component {
         <div className="main">
           <div className="container">
             <div className="row">
-              <div className="col-md-5 title-container">
+              <div className="col-sm-5 title-container">
                 <Title />
               </div>
-              <div className="col-md-7 list-container">
+              <div className="col-sm-7 list-container">
                 <input onChange={this.searchHandle.bind(this)}
                   placeholder="search term"
                   className="mb-4" />
+                <div className="list">
                   {this.state.books}
+                </div>
               </div>
             </div>
           </div>
