@@ -6,7 +6,7 @@ class Books extends Component {
   }
 
   render() {
-    const bookItem = this.props.bookList.map(book => (
+    const bookItems = this.props.bookList.map(book => (
       <div key={book.id} className="row mb-3 ml-2">
         <img className="col-sm-4 img-fluid img-thumbnail"
           src={book.imageLink}
@@ -27,7 +27,7 @@ class Books extends Component {
 
     return (
       <div className="list">
-        {bookItem}
+        {bookItems}
       </div >
     )
   }

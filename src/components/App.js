@@ -53,13 +53,6 @@ class App extends Component {
               <Title />
             </div>
             <div className="col-sm-7 list-container">
-              {/* <input onChange={this.searchHandle.bind(this)}
-                  placeholder="search term"
-                  className="mb-4" />
-                <div className="list">
-                  {this.state.books}
-                </div> */}
-
               <Form onSubmit={this.handleSearch} className="row" />
               <Books bookList={this.state.books} />
             </div>
