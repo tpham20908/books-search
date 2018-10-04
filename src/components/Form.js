@@ -23,11 +23,11 @@ class Form extends Component {
 
   render() {
     return (
-      <div className="mb-4 pl-3 pr-3">
+      <div className="mb-4">
         <form onSubmit={this.onSubmit}>
           <table>
             <tbody>
-              <tr className="row">
+              <tr>
                 <td className="col-sm-10" >
                   <input type="text" value={this.state.searchTerm} onChange={this.onChange} />
                 </td>

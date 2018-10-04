@@ -60,7 +60,7 @@ class App extends Component {
                   {this.state.books}
                 </div> */}
 
-              <Form onSubmit={this.handleSearch} />
+              <Form onSubmit={this.handleSearch} className="row" />
               <Books bookList={this.state.books} />
             </div>
           </div>
